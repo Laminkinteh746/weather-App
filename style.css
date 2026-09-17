@@ -1,0 +1,135 @@
+:root {
+    color-scheme: light;
+    font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+    color: #17324d;
+    background: #dceef2;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    background: linear-gradient(135deg, #dceef2 0%, #f7dfc4 100%);
+}
+
+.container {
+    width: min(100%, 560px);
+    padding: clamp(28px, 7vw, 56px);
+    text-align: center;
+    background: rgba(255, 255, 255, 0.88);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 24px 60px rgba(23, 50, 77, 0.16);
+}
+
+h1 {
+    margin: 0;
+    font-size: clamp(2.2rem, 8vw, 4.2rem);
+    letter-spacing: 0;
+    line-height: 1;
+}
+
+.intro {
+    margin: 16px 0 32px;
+    color: #557080;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #557080;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.search-row {
+    display: flex;
+    gap: 10px;
+}
+
+input,
+button {
+    min-height: 48px;
+    border-radius: 4px;
+    font: inherit;
+}
+
+input {
+    min-width: 0;
+    flex: 1;
+    padding: 0 14px;
+    color: #17324d;
+    background: #fff;
+    border: 1px solid #b8cbd0;
+}
+
+input:focus {
+    outline: 3px solid rgba(231, 137, 77, 0.3);
+    border-color: #e7894d;
+}
+
+button {
+    padding: 0 18px;
+    color: #fff;
+    background: #e4773d;
+    border: 0;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+button:hover {
+    background: #c95f2e;
+}
+
+#weatherInfo {
+    min-height: 150px;
+    margin-top: 34px;
+    padding-top: 24px;
+    border-top: 1px solid #d7e2e2;
+}
+
+#weatherInfo h2 {
+    margin: 0 0 8px;
+    font-size: 1.6rem;
+}
+
+.description {
+    margin: 0;
+    color: #557080;
+    text-transform: capitalize;
+}
+
+.temperature {
+    margin: 18px 0 6px;
+    color: #e4773d;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.loading,
+.error {
+    color: #557080;
+}
+
+.error {
+    color: #b64532;
+}
+
+@media (max-width: 480px) {
+    .search-row {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+}
